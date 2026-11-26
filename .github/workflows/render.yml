@@ -35,7 +35,10 @@ jobs:
       - name: Render video (draft quality)
         run: |
           cd engine
-          npx stickman build videos/awan-lebih-berat --quality
+          npx stickman
+git add .
+git commit -m "Fix YAML syntax"
+git push
 @"
 name: Render Stickman Video
 
