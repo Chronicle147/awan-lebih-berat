@@ -3,7 +3,7 @@
 on:
   push:
     paths:
-      - 'videos/**'
+      - '**'
   workflow_dispatch:
 
 jobs:
@@ -28,7 +28,10 @@ jobs:
 
       - name: Copy video project into engine
         run: |
-          cp -r videos/awan-lebih-berat engine/videos/
+          mkdir -p engine/videos/awan-lebih-berat
+          cp -r . engine/videos/awan-lebih-berat/
+          # Remove .github from copied folder to avoid nested workflows
+          rm -rf engine/videos/awan-lebih-berat/.github
 
       - name: Setup Stickman Kino (Chrome, fonts)
         run: |
