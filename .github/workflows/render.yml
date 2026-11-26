@@ -1,0 +1,51 @@
+﻿name: Render Stickman Video
+
+on:
+  push:
+    paths:
+      - 'videos/**'
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Stickman Kino (Chrome, fonts)
+        run: npx stickman setup --no-tts
+
+      - name: Render video (draft quality for speed)
+        run: npx stickman build videos/awan-lebih-berat --quality draft
+
+      - name: Upload MP4 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: awan-lebih-berat
+          path: videos/awan-lebih-berat/renders/*.mp4
+          retention-days: 7
+
+      - name: Upload high-quality render (optional)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          npx stickman build videos/awan-lebih-berat --quality looks
+
+      - name: Upload looks quality artifact
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: awan-lebih-berat-looks
+          path: videos/awan-lebih-berat/renders/*.mp4
+          retention-days: 7
