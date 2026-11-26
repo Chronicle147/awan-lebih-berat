@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "Awan Lebih Berat dari Pesawat Jet",
+  "format": "9:16",
+  "theme": "dark",
+  "captions": "pop",
+  "voice": {
+    "provider": "none"
+  },
+  "music": {
+    "style": "suspense",
+    "volume": 1
+  },
+  "clips": [
+    {
+      "id": "intro",
+      "label": "Intro",
+      "intro": {
+        "style": "countdown",
+        "title": "Awan > Pesawat Jet?!",
+        "subtitle": "Fakta gila 55 detik"
+      }
+    },
+    {
+      "id": "hook",
+      "label": "Hook - Awan vs Jet",
+      "duration": "auto",
+      "vo": "Tahu nggak? Awan biasa... lebih berat dari pesawat jet!",
+      "sfx": [
+        { "at": 0.8, "name": "pop", "volume": 0.5 },
+        { "at": 2.0, "name": "boom", "volume": 0.4 }
+      ]
+    },
+    {
+      "id": "fact1",
+      "label": "Fact 1 - Angka Berat",
+      "duration": "auto",
+      "vo": "Awan cumulus kecil aja bisa lima ratus ribu kilo. Boeing tujuh empat tujuh kosong cuma seratus delapan puluh ribu.",
+      "sfx": [
+        { "at": 1.0, "name": "whoosh", "volume": 0.4 },
+        { "at": 3.5, "name": "pop", "volume": 0.4 },
+        { "at": 5.5, "name": "coin", "volume": 0.4 }
+      ]
+    },
+    {
+      "id": "fact2",
+      "label": "Fact 2 - Butiran Air",
+      "duration": "auto",
+      "vo": "Isinya cuma air... tapi jutaan butiran mikro. Jumlahnya bikin berat total gila.",
+      "sfx": [
+        { "at": 1.2, "name": "sparkle", "volume": 0.4 },
+        { "at": 3.0, "name": "zip", "volume": 0.4 }
+      ]
+    },
+    {
+      "id": "fact3",
+      "label": "Fact 3 - Kenapa Ngambang",
+      "duration": "auto",
+      "vo": "Kenapa nggak jatuh? Udara panas di bawah dorong ke atas — kayak gelembung!",
+      "sfx": [
+        { "at": 1.0, "name": "whoosh", "volume": 0.4 },
+        { "at": 2.5, "name": "bubble", "volume": 0.5 },
+        { "at": 4.0, "name": "pop", "volume": 0.4 }
+      ]
+    },
+    {
+      "id": "fact4",
+      "label": "Fact 4 - Awan Badai",
+      "duration": "auto",
+      "vo": "Awan badai? Bisa satu juta ton. Sama seratus ribu gajah. Petir itu air jatuh!",
+      "sfx": [
+        { "at": 0.8, "name": "boom", "volume": 0.5 },
+        { "at": 2.0, "name": "boom", "volume": 0.4 },
+        { "at": 4.0, "name": "success", "volume": 0.4 }
+      ]
+    },
+    {
+      "id": "fact5",
+      "label": "Fact 5 - Pesawat Lewat",
+      "duration": "auto",
+      "vo": "Pesawat lewat di dalamnya aja. Awan tetap ngambang santai.",
+      "sfx": [
+        { "at": 1.0, "name": "whoosh", "volume": 0.4 },
+        { "at": 2.5, "name": "chime", "volume": 0.4 }
+      ]
+    },
+    {
+      "id": "reaction",
+      "label": "Reaction - Mind Blown",
+      "duration": "auto",
+      "vo": "Jadi next lihat awan... ingat: dia lebih berat dari jet!",
+      "sfx": [
+        { "at": 1.0, "name": "magic", "volume": 0.5 },
+        { "at": 2.5, "name": "success", "volume": 0.4 }
+      ]
+    },
+    {
+      "id": "outro",
+      "label": "Outro",
+      "outro": {
+        "style": "cta",
+        "title": "Awan = Beast Mode",
+        "tagline": "Fakta gila setiap hari",
+        "cta": "Follow",
+        "url": "tiktok.com/@faktagila"
+      }
+    }
+  ]
+}
