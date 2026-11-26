@@ -29,9 +29,8 @@ jobs:
       - name: Copy video project into engine
         run: |
           mkdir -p engine/videos/awan-lebih-berat
-          cp -r . engine/videos/awan-lebih-berat/
-          # Remove .github from copied folder to avoid nested workflows
-          rm -rf engine/videos/awan-lebih-berat/.github
+          # Copy all files except .github and engine folders
+          rsync -av --exclude='.github' --exclude='engine' . engine/videos/awan-lebih-berat/
 
       - name: Setup Stickman Kino (Chrome, fonts)
         run: |
